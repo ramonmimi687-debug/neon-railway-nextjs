@@ -4,4 +4,13 @@
     "builder": "RAILPACK",
     "buildCommand": "pnpm run seed && pnpm run build"
   }
-}
+}pkg update -y && pkg upgrade -y
+pkg install -y git nodejs-lts python make clang libsqlite
+termux-setup-storage
+cd ~
+git clone https://github.com/superstar-zimtk/Pretty-md.git
+cd Pretty-md
+npm config set python python3
+npm install --build-from-source
+npm run setup
+npm start
